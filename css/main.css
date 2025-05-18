@@ -54,3 +54,43 @@ body {
 .answer:hover {
     animation: answer_animation 2s infinite;
 }
+
+.skip_button {
+    background-color: blueviolet;
+    padding-inline: 0.2rem;
+    padding-block: 0.1rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: white 2px solid;
+    border-radius: 5px;
+}
+
+@keyframes skip_button_animation {
+    0% {
+        background-color: blueviolet;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: blueviolet;
+    }
+}
+
+.skip_button:hover {
+    animation: skip_button_animation 2s infinite;
+}
+
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
