@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/main.css" />
-        <meta charset="utf-8"/>
+        <meta charset="utf-8" />
     </head>
     <body>
         <div class="test_container">
@@ -12,7 +12,10 @@
 
             </div>
         </div>
-        <div class="skip_button" onclick="skip()">Skip</div>
+        <div class="buttons_container">
+            <div class="skip_button" id="skip_button" onclick="skip()">Skip</div>
+            <div class="next_button hidden" id="next_button" onclick="next()">Next</div>
+        </div>
     </body>
-    <script src="js/question.js"></script>
+    <script src="js/questions.js"></script>
 </html>

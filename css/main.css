@@ -20,6 +20,7 @@ body {
 
 #question_container {
     font-size: 3rem;
+    text-align: center;
 }
 
 #answers_container {
@@ -29,7 +30,7 @@ body {
 }
 
 .answer {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255,255,255,0.1);
     color: white;
     font-size: 2rem;
     padding-left: 5rem;
@@ -55,16 +56,51 @@ body {
     animation: answer_animation 2s infinite;
 }
 
-.skip_button {
-    background-color: blueviolet;
-    padding-inline: 0.2rem;
-    padding-block: 0.1rem;
-    font-size: 1.5rem;
-    width: fit-content;
-    height: fit-content;
+.buttons_container {
     position: absolute;
     bottom: 10px;
     right: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.skip_button {
+    background-color: blueviolet;
+    padding-inline: 0.4rem;
+    padding-block: 0.2rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    border: white 2px solid;
+    border-radius: 5px;
+}
+
+@keyframes next_button_animation {
+    0% {
+        background-color: orange;
+    }
+
+    50% {
+        background-color: orangered;
+    }
+
+    100% {
+        background-color: orange;
+    }
+}
+
+.next_button:hover {
+    animation: next_button_animation 2s infinite;
+}
+
+.next_button {
+    background-color: orange;
+    padding-inline: 0.4rem;
+    padding-block: 0.2rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: fit-content;
     border: white 2px solid;
     border-radius: 5px;
 }
@@ -88,9 +124,39 @@ body {
 }
 
 .correct {
-    background-color: green;
+    animation: correct_animation 1s 1;
+    animation-fill-mode: forwards;
 }
 
 .wrong {
-    background-color: red;
+    animation: wrong_animation 1s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes wrong_animation {
+    from {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    to {
+        background-color: red;
+    }
+}
+
+@keyframes correct_animation {
+    from {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    to {
+        background-color: green;
+    }
+}
+
+.neutral {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.hidden {
+    display: none;
 }
