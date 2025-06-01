@@ -74,6 +74,8 @@ body {
     height: fit-content;
     border: white 2px solid;
     border-radius: 5px;
+    cursor: default;
+    user-select: none;
 }
 
 @keyframes next_button_animation {
@@ -103,6 +105,8 @@ body {
     height: fit-content;
     border: white 2px solid;
     border-radius: 5px;
+    cursor: default;
+    user-select: none;
 }
 
 @keyframes skip_button_animation {
@@ -158,5 +162,54 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
+}
+
+#valor {
+    font-size: 2rem;
+    width: 5rem;
+    height: 2rem;
+    font-weight: 600;
+    padding-inline: 0.8rem;
+    padding-block: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border: solid red 2px;
+    border-radius: 10px;
+}
+
+#endScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    z-index: 10;
+}
+
+.tryAgain {
+    font-size: 1.4rem;
+    width: fit-content;
+    height: 1.4rem;
+    padding-inline: 0.8rem;
+    padding-block: 0.4rem;
+    border: solid lightgray 2px;
+    border-radius: 10px;
+    cursor: default;
+    user-select: none;
+}
+
+.tryAgain:hover {
+    color: orange;
 }
